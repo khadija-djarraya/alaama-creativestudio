@@ -82,7 +82,7 @@ export default function ContactUs() {
       }}
     >
       <Button
-        href="https://linkedin.com/yourcompany"
+        href="https://www.linkedin.com/showcase/alaamastudio"
         target="_blank"
         sx={{
           width: '50px',
@@ -99,7 +99,7 @@ export default function ContactUs() {
       </Button>
 
       <Button
-        href="https://instagram.com/alaama.bh"
+        href="https://instagram.com/alaamastudio"
         target="_blank"
         rel="noopener noreferrer"
         sx={{

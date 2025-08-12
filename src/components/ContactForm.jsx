@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import { TextField, Button, Box, Alert, CircularProgress } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
+import dotenv from "dotenv";
+dotenv.config();
+
 const ContactForm = () => {
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID; // Replace with your EmailJS service ID
+  const TEMPLATE_ID =import.meta.env.VITE_TEMPLATE_ID; // Replace with your EmailJS template ID
+  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY; // Replace with your EmailJS public key
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,10 +30,10 @@ const ContactForm = () => {
 
     try {
       await emailjs.send(
-        'service_1u6uxm7',     // Replace with your EmailJS service ID
-        'template_8b1qtq8',    // Replace with your EmailJS template ID
+        SERVICE_ID,     // Replace with your EmailJS service ID
+        TEMPLATE_ID,    // Replace with your EmailJS template ID
         formData,
-        'Zeqo_zC68SNfbKdKF'      // Replace with your EmailJS public key
+        PUBLIC_KEY      // Replace with your EmailJS public key
       );
       
       setSubmitStatus({ success: true, message: 'Message sent successfully!' });

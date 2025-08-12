@@ -1,7 +1,7 @@
 // App.jsx
 import { useState, useEffect, useMemo } from 'react';
 import { useTheme } from '@mui/material/styles';
-import { Box, Grid, Typography, Link, Stack } from '@mui/material';
+import { Box, Typography, Stack } from '@mui/material';
 import TheNavBar from './components/TheNavBar.jsx'; // import once
 import Section1 from './views/Section1.jsx'; // your section components
 import Section2 from './views/Section2.jsx';
