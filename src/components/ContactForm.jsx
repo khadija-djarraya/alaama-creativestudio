@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { TextField, Button, Box, Alert, CircularProgress } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com';
-import dotenv from "dotenv";
-dotenv.config();
 
 const ContactForm = () => {
   const SERVICE_ID = import.meta.env.VITE_SERVICE_ID; // Replace with your EmailJS service ID
