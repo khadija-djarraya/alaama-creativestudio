@@ -10,7 +10,7 @@ export default function Section1() {
     root: {
       display: 'flex',
       width: '100%',
-      padding: { xs: 5, sm: 8 },
+      // padding: { xs: 5, sm: 8 },
       flexDirection: 'column',
       boxSizing: 'border-box',
       height:'fit-content',
@@ -22,7 +22,7 @@ export default function Section1() {
       alignItems: 'center',
       justifyContent: 'flex-start',
       width: '100%',
-      padding: { xs: 5, sm: 8 },
+      // padding: { xs: 5, sm: 8 },
     },
     imageWrapper: {
       display: 'flex',
@@ -49,7 +49,7 @@ export default function Section1() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      p: 2,
+      // p: 2,
     },
     redDot: {
       width: 12,
@@ -94,15 +94,20 @@ export default function Section1() {
 
   return (
     <Box component="section" sx={sectionStyles.root}>
-      <Box sx={sectionStyles.container}>
-        <Box sx={sectionStyles.imageWrapper}>
-          <img
-            src="/images/groundtext.jpg"
-            alt="Hero"
-            style={sectionStyles.image}
-          />
-        </Box>
-        <Box>
+      <Box sx={{ width: '100%', height: '300px', overflow: 'hidden' }}>
+    <img
+      src="/images/groundtext.jpg"
+      alt="Hero"
+      style={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover', // makes sure the image fills the box without distortion
+        display: 'block',
+      }}
+    />
+  </Box>
+
+        <Box padding={8}>
           <Typography sx={typographyStyles.welcome}>
             Welcome
             <span style={typographyStyles.aboard}>
@@ -122,6 +127,5 @@ export default function Section1() {
           </Box>
         </Box>
       </Box>
-    </Box>
   );
 }
