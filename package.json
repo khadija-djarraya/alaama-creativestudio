@@ -16,6 +16,7 @@
     "@mui/material": "^7.3.1",
     "dotenv": "^17.2.1",
     "emailjs-com": "^3.2.0",
+    "locomotive-scroll": "^4.1.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "use-deep-compare-effect": "^1.8.1"

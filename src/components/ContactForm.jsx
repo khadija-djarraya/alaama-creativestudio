@@ -53,6 +53,10 @@ const ContactForm = () => {
         gap: 2,
         width: '100%',
         maxWidth: 400,
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        padding: 5,
+        borderRadius: 2,
+        boxShadow: 3,
       }}
     >
       <TextField

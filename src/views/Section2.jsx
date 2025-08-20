@@ -1,115 +1,310 @@
-import { Box} from '@mui/material';
-import theme from '../theme';
-
 export default function Section2() {
-
   return (
-    <Box
-      component="section"
-     justifyContent="center"
-     alignItems="stretch"
-      sx={{
-        display: 'flex',
-        boxSizing: 'border-box',
-        minHeight: '100vh',
-        height:'fit-content',
-        overflow: 'auto', // Prevent overflow
+    <div 
+      style={{ 
+        minHeight: 'fit-content',
         width: '100%',
-        backgroundImage: 'url("/images/background.png")', // Place your image in public/images/
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundBlendMode: 'lighten', // Optional: blend image with color
-        padding:{ xs: 6, sm: 10 }, // padding for mobile and desktop
+        display: 'flex',
+        flexDirection: 'column',
+        padding: 0,
+        position: 'relative',
+        // overflow: 'hidden'
+        top: 0
       }}
     >
-     
-        <Box
-          sx={{
-            background: theme.palette.journal_white.main,
-            opacity: 0.7,
-            display: 'flex',
-            alignItems: 'stretch',
-            justifyContent: 'center',
-            width: '90%',
-            color: '#000',
-            flexDirection: { xs: 'column', sm: 'row' }, // Stack on mobile
-            padding: { xs: 1, sm: 3 },
-            gap: { xs: 2, sm: 0 },
-            boxSizing: 'border-box',
-            height:'fit-content',
-            overflow: 'auto', // Prevent overflow
-          }}
+      {/* Add a detection helper at the top of the section */}
+      <div 
+        data-scroll
+        data-scroll-call="updateSection"
+        style={{
+          position: 'absolute',
+          top: '10vh',
+          left: 0,
+          width: '100%',
+          height: '1px',
+          pointerEvents: 'none',
+          visibility: 'hidden'
+        }}
+      />
+      
+      <div
+        data-scroll
+        data-scroll-speed="-1"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          willChange: 'transform',
+          marginTop: '20vh',
+        }}
+      >
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-30"
+          style={{ willChange: 'transform' }}
         >
-          {/* Left Section */}
-          <Box
-            sx={{
-              flex: 1,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-around',
-              minHeight: { xs: '150px', sm: 'auto' },
+         <img
+  src="/images/coc.png"
+  // alt="Description"
+  style={{
+    transform: 'rotate(-20deg)',
+    fontSize: 'clamp(8rem, 8vw, 15rem)',
+    fontWeight: 'bold',
+    margin: 0,
+    objectFit: 'cover'
+  }}
+/>
+        </div>
+      </div>
+      
+      {/* Line 1 */}
+       <div
+        data-scroll
+        data-scroll-speed="-1"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          willChange: 'transform'
+        }}
+      >
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="30"                   // very fast L→R
+          style={{ willChange: 'transform' }}
+        >
+          <h3
+            style={{
+              display: 'inline-block',
+              transform: 'rotate(10deg)',
+              fontSize: 'clamp(8rem, 8vw, 15rem)',
+              fontWeight: 'bold',
+              margin: 0,
+              whiteSpace: 'nowrap',
+              background: '#fff',
+              color: '#000',
+              textShadow: '0 4px 6px rgba(178, 172, 172, 0.93)',
+              fontFamily:'Garet,sans-serif',
+              paddingInline:'20px'
+
             }}
           >
-            {/* Top Text */}
-            <Box sx={{ fontSize: { xs: '1.5rem', sm: '2.5rem' }, 
-                       alignSelf: 'flex-end',
-                       fontFamily: 'Garet, sans-serif', }}>
-              PROJECT
-              <span style={{ fontFamily: 'Corinthia, serif', fontSize: '5rem', color: theme.palette.primary.main }}>
-                S
-              </span>
-            </Box>
-            {/* Bottom Text */}
-            <Box sx={{ fontSize: { xs: '1.5rem', sm: '2.5rem' }, fontFamily: 'Garet, sans-serif'}}>
-              <span style={{ fontFamily: 'Corinthia, serif', fontSize: '5rem', color: theme.palette.primary.main }}>
-                We 
-              </span>
-               HANDLE
-            </Box>
-          </Box>
-          {/* Right Section */}
-          <Box
-            sx={{
-              flex: 3,
-              display: 'flex',
-              flexDirection: 'column', // Stack vertically
-              alignItems: { xs: 'center', sm: 'flex-start' },
-              justifyContent: 'center',
-              padding: { xs: 1, sm: 3 },
-              fontSize: { xs: '1rem', sm: '1rem' },
-              minHeight: { xs: '120px', sm: 'auto' },
-              textAlign: { xs: 'center', sm: 'left' },
-              fontFamily: 'Garet_light, sans-serif',
-              gap: 2, // space between items
+            We Build Awareness.
+          </h3>
+        </div>
+      </div>
+
+      {/* Add another detection helper in the middle */}
+      <div 
+        data-scroll
+        data-scroll-call="updateSection"
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: 0,
+          width: '100%',
+          height: '1px',
+          pointerEvents: 'none',
+          visibility: 'hidden'
+        }}
+      />
+
+<div
+        data-scroll
+        data-scroll-speed="1"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          willChange: 'transform',
+          marginTop: '20vh',
+        }}
+      >
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="30"
+          style={{ willChange: 'transform' }}
+        >
+         <img
+  src="/images/coccinn.png"
+  // alt="Description"
+  style={{
+    transform: 'rotate(15deg)',
+    fontSize: 'clamp(8rem, 8vw, 15rem)',
+    fontWeight: 'bold',
+    margin: 0,
+    objectFit: 'cover'
+  }}
+/>
+        </div>
+      </div>
+      {/* Line 2 */}
+      <div
+        data-scroll
+        data-scroll-speed="2"
+        style={{
+          height: '60vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          paddingRight: '5%',
+          marginTop: '-20vh',
+          willChange: 'transform'
+        }}
+      >
+        <div
+        data-scroll
+        data-scroll-speed="-1"
+        style={{
+          height: '60vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginTop: '10vh',
+          willChange: 'transform'
+        }}
+      >
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-30"                   // very fast L→R
+          style={{ willChange: 'transform' }}
+        >
+          <h3
+            style={{
+              display: 'inline-block',
+              transform: 'rotate(-15deg)',
+              fontSize: 'clamp(8rem, 8vw, 15rem)',
+              fontWeight: 'bold',
+              margin: 0,
+              whiteSpace: 'nowrap',
+              background: '#fff',
+              color: '#000',
+              textShadow: '0 4px 6px rgba(178, 172, 172, 0.93)',
+              fontFamily:'Garet,sans-serif',
+                            paddingInline:'20px',
+              marginTop: '20vh'
+
             }}
           >
-            <Box>
-              <span style={{ fontFamily: 'Times New Roman, serif', fontSize: '2rem', fontStyle: 'italic' }}>
-                Web & Mobile Application Development
-              </span>
-              <div>
-                We turn ideas into intuitive, high-performance digital products. Whether it's a stunning website or a powerful mobile app, our team designs seamless experiences that are built to scale and tailored to engage.
-              </div>
-            </Box>
-            <Box>
-              <span style={{ fontFamily: 'Times New Roman, serif', fontSize: '2rem', fontStyle: 'italic' }}>
-                Branding & Identity Design
-              </span>
-              <div>
-                Your brand is more than visuals — it's your voice, your values, your presence. We craft complete brand identities that spark connection, build trust, and stand out in a crowded world. From strategy to design, we tell your story with impact.
-              </div>
-            </Box>
-            <Box>
-              <span style={{ fontFamily: 'Times New Roman, serif', fontSize: '2rem', fontStyle: 'italic' }}>
-                Media Management
-              </span>
-              <div>
-                We don’t just manage content — we create moments that matter. From social media to digital campaigns, we grow your audience with consistent, creative, and data-driven storytelling that drives engagement and builds loyalty.
-              </div>
-            </Box>
-      </Box>
-      </Box>
-    </Box>
+            Drive Engagement.
+          </h3>
+        </div>
+      </div>
+    </div>
+
+      {/* Line 3 */}
+      <div
+        data-scroll
+        data-scroll-speed="-1"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          willChange: 'transform'
+        }}
+      >
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="30"                   // very fast L→R
+          style={{ willChange: 'transform' }}
+        >
+          <h3
+            style={{
+              display: 'inline-block',
+              transform: 'rotate(5deg)',
+              fontSize: 'clamp(8rem, 8vw, 15rem)',
+              fontWeight: 'bold',
+              margin: 0,
+              whiteSpace: 'nowrap',
+              background: '#fff',
+              color: '#000',
+              textShadow: '0 4px 6px rgba(178, 172, 172, 0.93)',
+              fontFamily:'Garet,sans-serif',
+              paddingInline:'20px',
+              marginTop: '20vh'
+            }}
+          >
+            Launch with impact.
+          </h3>
+        </div>
+      </div>
+
+
+      {/* Line 4 */}
+      <div
+        data-scroll
+        data-scroll-speed="1"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          willChange: 'transform',
+          marginTop: '20vh',
+        }}
+      >
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="30"
+          style={{ willChange: 'transform' }}
+        >
+         <img
+  src="/images/coccinn.png"
+  // alt="Description"
+  style={{
+    transform: 'rotate(15deg)',
+    fontSize: 'clamp(8rem, 8vw, 15rem)',
+    fontWeight: 'bold',
+    margin: 0,
+    objectFit: 'cover'
+  }}
+/>
+        </div>
+      </div>
+
+      {/* Line 4 */}
+      <div
+        data-scroll
+        data-scroll-speed="-1"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          willChange: 'transform',
+          marginTop: '20vh',
+        }}
+      >
+        <div
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-30"
+          style={{ willChange: 'transform' }}
+        >
+          <h3
+            style={{
+              display: 'inline-block',
+              transform: 'rotate(-15deg)',
+              fontSize: 'clamp(8rem, 8vw, 15rem)',
+              fontWeight: 'bold',
+              margin: 0,
+              whiteSpace: 'nowrap',
+              background: '#fff',
+              color: '#000',
+              fontFamily:'Garet,sans-serif',
+              textShadow: '0 4px 6px rgba(178, 172, 172, 0.93)',
+              paddingInline:'20px'
+            }}
+          >
+            And Deliver Results.
+          </h3>
+        </div>
+      </div>
+
+    </div>
   );
 }

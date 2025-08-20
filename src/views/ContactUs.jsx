@@ -1,12 +1,11 @@
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { Box, Typography, useTheme, Button } from "@mui/material";
+import { Box, Typography,useTheme, Button } from "@mui/material";
 import ContactForm from "../components/ContactForm";
 
 export default function ContactUs() {
   const theme = useTheme();
-
   return (
     <Box
   component="section"
@@ -16,6 +15,7 @@ export default function ContactUs() {
     padding: { xs: 3, md: 6 },
     minHeight: '100vh',
     alignItems: 'center',
+    backgroundImage: 'url(/images/green.jpeg)',
   }}
 >
   <Box
@@ -42,31 +42,16 @@ export default function ContactUs() {
       <Typography
         variant="h2"
         sx={{
-          fontFamily: '"Garet_light", sans-serif',
+          fontFamily: '"Garet", sans-serif',
           fontSize: { xs: '2.8rem', sm: '3.5rem' },
           fontWeight: 600,
           lineHeight: 1,
+          color: theme.palette.primary.main,
           mb: 1,
+          shadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
         }}
-      >
-        <span
-          style={{
-            fontFamily: '"Corinthia", cursive',
-            color: theme.palette.primary.main,
-          }}
-        >
-          C
-        </span>
-        ontact
-        <span
-          style={{
-            fontFamily: '"Corinthia", cursive',
-            color: theme.palette.primary.main,
-          }}
-        >
-          U
-        </span>
-        s
+      >   
+        Contact Us
       </Typography>
 
       <ContactForm />
