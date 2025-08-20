@@ -49,7 +49,7 @@ export default function App() {
 
   const sections = useMemo(() => [
     { id: 'section1', label: 'About Us', bgColor: '#8C001A', textColor: '#fff', component: <Section1 /> },
-    { id: 'section2', label: 'Our Values', bgColor: '#493ca7ff', textColor: '#fff', component: <Section2 /> },
+    { id: 'section2', label: 'Our Values', bgColor: '#8C001A', textColor: '#fff', component: <Section2 /> },
     { id: 'section3', label: 'Services', bgColor: '#FFD23F', textColor: '#000', component: <Section3 /> },
     { id: 'contact-us', label: 'Contact Us', bgColor: theme.palette.yello?.default || '#8C001A', textColor: '#fff', component: <ContactUs /> },
   ], [theme]);
